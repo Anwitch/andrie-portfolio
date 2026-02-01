@@ -17,6 +17,14 @@ function Card({ children }: { children: React.ReactNode }) {
   );
 }
 
+function PlaceholderShot({ label }: { label: string }) {
+  return (
+    <div className="flex min-h-28 items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-50 p-4 text-center text-xs text-zinc-500">
+      {label}
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900">
@@ -30,8 +38,9 @@ export default function Home() {
             Andrie Wijaya
           </h1>
           <p className="text-lg leading-relaxed text-zinc-600">
-            Automation Engineer (n8n + custom code). I build web apps and AI
-            automations that reduce manual work and help teams move faster.
+            I help digital agencies deliver web apps and automations faster—without
+            hiring full-time. White-label friendly (n8n + custom code), built for
+            measurable outcomes.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
@@ -51,40 +60,9 @@ export default function Home() {
           </div>
         </header>
 
-        {/* OFFERS */}
-        <section className="mt-12 space-y-4">
-          <SectionTitle>OFFERS</SectionTitle>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card>
-              <h3 className="text-base font-semibold">AI Automation Sprint</h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                48h–5d delivery. n8n workflows + integrations (Sheets/CRM/email),
-                optional AI steps (classification, summarization, auto-replies).
-              </p>
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-zinc-700">
-                <li>Discovery → build → handover docs</li>
-                <li>White-label friendly for agencies</li>
-                <li>Pricing: by quote</li>
-              </ul>
-            </Card>
-            <Card>
-              <h3 className="text-base font-semibold">Website + Automation</h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                Landing/catalog + lead capture + automated follow-up. Built for
-                conversion and operations.
-              </p>
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-zinc-700">
-                <li>Fast UI + clean UX</li>
-                <li>Analytics + forms + integrations</li>
-                <li>Pricing: by quote</li>
-              </ul>
-            </Card>
-          </div>
-        </section>
-
         {/* PROOF / PROJECTS */}
         <section className="mt-12 space-y-4">
-          <SectionTitle>SELECTED WORK</SectionTitle>
+          <SectionTitle>PROOF</SectionTitle>
           <div className="space-y-4">
             <Card>
               <div className="flex items-start justify-between gap-4">
@@ -92,22 +70,27 @@ export default function Home() {
                   <h3 className="text-base font-semibold">DapurSanti</h3>
                   <p className="mt-1 text-sm text-zinc-600">
                     E-commerce catalog + WhatsApp ordering (React + FastAPI +
-                    PostgreSQL). Built for small businesses and easy agency
-                    delivery.
+                    PostgreSQL). A strong base for agency client work.
                   </p>
                 </div>
                 <span className="shrink-0 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700">
                   flagship
                 </span>
               </div>
+
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-zinc-700">
-                <li>Product catalog + ordering flow designed to reduce friction</li>
-                <li>Backend API ready for integrations (payments, CRM, inventory)</li>
-                <li>Ideal base for “Website + Automation” client projects</li>
+                <li>Product catalog + frictionless WhatsApp ordering flow</li>
+                <li>Backend API ready for payments/CRM/inventory integrations</li>
+                <li>Designed for fast delivery + easy handover</li>
               </ul>
-              <p className="mt-4 text-xs text-zinc-500">
-                Demo link & screenshots: coming next (deploy to Vercel with dummy
-                data).
+
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                <PlaceholderShot label="Screenshot #1 (homepage / catalog)" />
+                <PlaceholderShot label="Screenshot #2 (cart / checkout / WA CTA)" />
+                <PlaceholderShot label="Screenshot #3 (admin / order view)" />
+              </div>
+              <p className="mt-3 text-xs text-zinc-500">
+                (Replace these placeholders with 3 real screenshots once ready.)
               </p>
             </Card>
 
@@ -119,7 +102,7 @@ export default function Home() {
                   Alpine.js).
                 </p>
                 <p className="mt-3 text-xs text-zinc-500">
-                  Great proof for AI automation capability.
+                  Strong proof for practical AI features in real products.
                 </p>
               </Card>
               <Card>
@@ -131,6 +114,42 @@ export default function Home() {
                 <p className="mt-3 text-xs text-zinc-500">Has public stars.</p>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* OFFERS */}
+        <section className="mt-12 space-y-4">
+          <SectionTitle>OFFERS</SectionTitle>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Card>
+              <h3 className="text-base font-semibold">AI Automation Sprint</h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                48h–5d delivery. Build one high-impact automation (n8n +
+                integrations) with optional AI steps (classification,
+                summarization, auto-replies).
+              </p>
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+                <li>Discovery → build → handover docs (white-label OK)</li>
+                <li>Examples: lead routing, inbox triage, reporting, follow-ups</li>
+                <li>
+                  Typical investment: <b>$800–$3,500+</b> (scope-dependent)
+                </li>
+              </ul>
+            </Card>
+            <Card>
+              <h3 className="text-base font-semibold">Website + Automation</h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                A conversion-focused landing/catalog plus automated lead capture
+                and follow-up—built for operations, not just design.
+              </p>
+              <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+                <li>Fast UI + clean UX + analytics</li>
+                <li>Forms + email/CRM + basic automations</li>
+                <li>
+                  Typical investment: <b>$1,500–$6,000+</b> (scope-dependent)
+                </li>
+              </ul>
+            </Card>
           </div>
         </section>
 
@@ -180,8 +199,8 @@ export default function Home() {
         <footer className="mt-14 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="text-base font-semibold">Want help this week?</h2>
           <p className="mt-2 text-sm text-zinc-600">
-            Send a quick summary of your workflow/problem and I’ll reply with a
-            plan and a quote.
+            Send a quick summary of the workflow/problem and I’ll reply with a
+            plan + a clear estimate.
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <a
